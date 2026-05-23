@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<!-- Mirrored from www.ambrosilocoscornik.com/modal/modal-content.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 23 May 2026 03:18:36 GMT -->
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Multistep form</title>
+  <link rel="stylesheet" href="style.html">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" 
+    href="../../cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <title>Reseller Form</title>
+</head>
+<body>
+    <div class="modal-reseller">
+    <main class="modal-resellerwrapper">
+        <nav class="modal-resellerprogress-form">
+            <div class="modal-resellerlogo">
+               <img src="https://imgur.com/QtOaApz" alt="">
+            </div>
+            <div class="modal-resellerprogress">
+                <div class="step active-step" data-title="Personal Information"></div>
+                <div class="step" data-title="Food Resell"></div>
+                <div class="step" data-title="Contact Details"></div>
+                <div class="modal-resellerindicator"></div>
+            </div>
+        </nav>
+
+        <style>
+            /* CSS to position the close button in the top right corner */
+.close-button {
+    position: absolute;
+    top: 10px; /* Adjust as needed to control vertical position */
+    right: 15%; /* Adjust as needed to control horizontal position */
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: #333; /* Color of the X icon */
+}
+
+        </style>
+       
+
+    <script>
+        window.onload = function () {
+            const closeIframeButton = document.getElementById("closeIframe");
+
+            closeIframeButton.addEventListener("click", function () {
+                // Send a debugging message to the parent window
+                console.log("Sending closeIframe message to parent window");
+                window.parent.postMessage("closeIframe", "*");
+            });
+        }
+    </script>
+        <form id="reseller-emailForm" class="modal-resellerform-create-account">
+            <div class="close-button" id="closeIframe"><i class="fas fa-times"></i></div>
+            <section class="step-of-form active-step-of-form">
+                <div class="modal-resellerlogo-section"><i class="fa-solid fa-image-portrait"></i></div>
+                <h2>Personal Information</h2>
+                <h3>Enter your personal information</h3>
+                
+                <div class="modal-resellerrow-input">
+                    <input type="text" class="modal-resellertext"  id="firstname" name="firstname" placeholder="First Name" required>
+                    <label for="firstname" class="modal-resellerabout-input">First Name*</label>
+                </div>
+                <div class="modal-resellerrow-input">
+                    <input type="text" class="modal-resellertext" name="lastname" id="lastname" placeholder="Last Name" required>
+                    <label for="lastname" class="modal-resellerabout-input">Last Name*</label>
+                </div>
+                
+                <div class="modal-resellerrow-input">
+                    <div class="modal-resellerdate">
+                        <input type="text" class="modal-resellertext" id="Barangay" name="Barangay" placeholder="Barangay" required>
+                        <input type="text" class="modal-resellertext" id="city" name="city" placeholder="Town / City" required>
+                        <input type="text" class="modal-resellertext" id="province" name="province" placeholder="Provice" required>
+                    </div>
+                    
+                     <label for="date" class="modal-resellerabout-input">Complete Address*</label>
+                </div>
+            </section>
+            <section class="step-of-form">
+                <div class="modal-resellerlogo-section"><i class="fa-solid fa-utensils"></i></div>
+                <h2>Products</h2>
+                <h3>Enter Products you want to ReSell</h3>
+                
+                <div class="modal-resellerkinds-of-kitchens">
+                    <div class="modal-resellertale">
+                        <input type="checkbox" name="" id="kitchen1">
+                        <label for="kitchen1" class="modal-resellerkind-of-kitchen">
+                            <img src="../../cdn-icons-png.flaticon.com/512/6108/6108170.png" style="width: 50%;" alt="">
+                            <h6>Garlic Flavor</h6>
+                        </label>
+                    </div>
+                    <div class="modal-resellertale">
+                        <input type="checkbox" name="" id="kitchen2">
+                        <label for="kitchen2" class="modal-resellerkind-of-kitchen">
+                            <img src="https://imgur.com/UBLnnkT" style="width: 50%;" alt="">
+                            <h6>Adobo Garlic Flavor</h6>
+    
+                        </label>
+                    </div>
+                    <div class="modal-resellertale">
+                        <input type="checkbox" name="" id="kitchen3">
+                        <label for="kitchen3" class="modal-resellerkind-of-kitchen">
+                           <img src="../../cdn-icons-png.flaticon.com/512/883/883514.png" style="width: 50%;" alt="">
+                            <h6>Cheese Flavor</h6>
+                        </label>
+                    </div>
+                    <div class="modal-resellertale">
+                        <input type="checkbox" name="" id="kitchen4">
+                        <label for="kitchen4" class="modal-resellerkind-of-kitchen">
+                           <img src="../../cdn-icons-png.flaticon.com/512/2755/2755300.png" style="width: 50%;" alt="">
+                            <h6>Barbeque Flavor</h6>
+                        </label>
+                    </div>
+                    <div class="modal-resellertale">
+                        <input type="checkbox" name="" id="kitchen5">
+                        <label for="kitchen5" class="modal-resellerkind-of-kitchen">
+                            <img src="https://imgur.com/BcWMNrA" style="width: 50%;" alt="">
+                            <h6>Adobo-Spicy Flavor</h6>
+                        </label>
+                    </div>
+                    <div class="modal-resellertale">
+                        <input type="checkbox" name="" id="kitchen6">
+                        <label for="kitchen6" class="modal-resellerkind-of-kitchen">
+                            <img src="../../cdn.shopify.com/s/files/1/0984/4296/files/spicyicon_696b3bf3-70b7-489f-84f4-cd648f48efee852e.png?v=1650468868" style="width: 50%;" alt="">
+                            <h6>Sweet&Spicy Flavor</h6>
+                        </label>
+                    </div>
+                    <div class="modal-resellertale">
+                        <input type="checkbox" name="" id="kitchen7">
+                        <label for="kitchen7" class="modal-resellerkind-of-kitchen">
+                          <img src="../../png.pngtree.com/png-vector/20220824/ourmid/pngtree-vegetable-maize-nature-leaf-vector-png-image_33425744.png" style="width: 60%;" alt="">
+                            <h6>Sweet Flavor</h6>
+                        </label>
+                    </div>
+                </div>
+            </section>
+            <section class="step-of-form">
+                <div class="modal-resellerlogo-section"><i class="fa fa-address-book"></i></div>
+                <h2>Contact Details</h2>
+                <h3>Enter Your Contact Details for Reaching you out</h3>
+               
+                <div class="modal-resellerrow-input">
+                    <input type="email" class="modal-resellertext" id="email" name="email" placeholder="email@example.com" required>
+                    <label for="email" class="modal-resellerabout-input">Email*</label>
+                </div>
+
+                <div class="modal-resellerrow-input">
+                    <input type="tel" class="modal-resellertext" id="phone" name="phone" placeholder="09123456789" required>
+                    <label for="phone" class="modal-resellerabout-input">Phone Number*</label>
+                </div>
+
+            </section>
+            <div class="modal-resellerbtns">
+                <input type="button" value="Previous" class="modal-resellerback" disabled>
+                <input type="button" value="Next" class="modal-resellernext">
+                <input type="submit" value="Submit" class="submit hidden-btn">
+            </div>
+        </form>
+    </main>
+    </div>
+</body>
+
+<!-- Mirrored from www.ambrosilocoscornik.com/modal/modal-content.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 23 May 2026 03:18:45 GMT -->
+</html>
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;900&amp;display=swap');
+
+
+.modal-reseller {
+    min-height: 100vh;
+    font-family: var(--fontFamilyPrimary);
+    --fontFamilyPrimary: 'Montserrat', sans-serif;
+    --index: calc(1vw + 1vh);
+    --secondary-color: rgb(91,196,197);
+    --progressPanel-color: rgb(196, 186, 178);
+    --main-color: #fff;
+    --border-color: #d8d8d8;
+    --text-color: rgba(0, 0, 0, .5);
+}
+
+.modal-reseller * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.modal-resellerwrapper {
+    min-height: 623px;
+    width: 1000px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    border-radius: 15px;
+    box-shadow: 2px 10px 8px var(--border-color), 
+                inset 0 -3px 5px var(--border-color);
+    border: 5px solid var(--border-color);
+}
+.modal-resellerprogress-form {
+    min-width: 220px;
+    background: var(--progressPanel-color);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 4% 5%;
+    gap: 50px;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    box-shadow: inset 0 -3px 5px var(--border-color);
+}
+.modal-resellerprogress {
+    counter-reset: steps;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    position: relative;
+    &::before {
+        content: '';
+        width: 3px;
+        height: 100%;
+        background: var(--border-color);
+        position: absolute;
+    }
+}
+.modal-resellerindicator {
+    width: 3px;
+    height: 0%;
+    position: absolute;
+    background: var(--secondary-color);
+    transition: .5s;
+}
+.step {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    border-radius: 50%;
+    border-radius: 5;
+    border: 5px solid var(--border-color);
+    width: 2.5rem;
+    aspect-ratio: 1 / 1;
+    z-index: 1;
+    background: var(--main-color);
+    transition: .5s .2s;
+    &::before {
+        counter-increment: steps;
+        content: counter(steps);
+        font-size: 1.3rem;
+    }
+    &::after {
+        content: attr(data-title);
+        font-size: .8rem;
+        position: absolute;
+        font-weight: 700;
+        opacity: .6;
+        left: 140%;
+        color: var(--main-color);
+        transition: .5s .4s;
+    }
+}
+
+.active-step {
+    border: 5px solid var(--secondary-color);
+    &::after {
+        opacity: 1;
+    }
+}
+.modal-resellerlogo {
+   position: relative;
+   left: 50%;
+   transform: translate(-50%);
+   filter: drop-shadow(0 5px 5px var(--border-color));
+}
+.modal-resellerform-create-account {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 5% 5% 5% 10%;
+}
+.step-of-form {
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+    
+    & h2 {
+        font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--text-color);
+    }
+    & h3 {
+        font-size: 1.1rem;
+    font-weight: 500;
+    color: var(--text-color);
+    }
+}
+
+.modal-resellerlogo-section {
+    & i {
+        color: var(--secondary-color);
+        font-size: 45px;
+    }
+    
+}
+.modal-resellerrow-input {
+    width: 100%;
+    display: flex;
+    flex-direction: column-reverse;
+    position: relative;
+    padding-top: 15px;
+}
+.modal-resellerabout-input {
+    display: block;
+    font-weight: 500;
+    font-size: .9rem;
+    padding-bottom: 3%;
+    transition: .5s;
+}
+.step-of-form input:required:placeholder-shown {
+    background: initial;
+    &::placeholder {
+        color: initial;
+        font-weight: initial;
+    }
+}
+
+
+
+.modal-resellertext {
+    display: block;
+    width: 100%;
+    padding: 3% 2%;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    outline: none;
+    font-family: var(--fontFamilyPrimary);
+    transition: .5s;
+    &:focus {
+        border: 1px solid var(--secondary-color);
+        transform: scale(1.05);
+        & ~ label {
+            color: var(--secondary-color);
+        }
+        & ~ .state-of-password {
+            transform: translateY(-50%) scale(1.2);
+            color: var(--secondary-color);
+        }
+    }
+}
+.modal-resellerdate {
+    display: flex;
+    gap: 18px;
+    & .text {
+        text-align: center;
+    }
+
+}
+.modal-resellerbtns {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    & input {
+        padding: 4% 5%;
+        border-radius: 20px;
+        border: none;
+        outline: none;
+        background: var(--secondary-color);
+        color: var(--main-color);
+        font-weight: 600;
+        cursor: pointer;
+        box-shadow: 0 3px 3px rgba(0, 0, 0, .3),
+                    inset 0 -2px 3px rgba(0, 0, 0, .3);
+        transition: .5s;
+        &:active {
+            box-shadow: 0 3px 3px rgba(0, 0, 0, .1),
+                    inset 0 -2px 3px rgba(0, 0, 0, .1);
+            transform: translateY(3px);
+        }
+        &:disabled {
+            opacity: .5;
+            cursor: not-allowed;
+            &:active {
+                box-shadow: 0 3px 3px rgba(0, 0, 0, .3),
+                    inset 0 -2px 3px rgba(0, 0, 0, .3);
+                transform: none;
+            }
+        }
+    }
+}
+
+.modal-resellerform-create-account {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+input[id^='password'] {
+    padding: 3% 12% 3% 2%;
+}
+.state-of-password {
+    position: absolute;
+    left: 92%;
+    transform: translateY(-50%);
+    transition: .5s;
+    cursor: pointer;
+    opacity: .8;
+}
+.modal-resellerkinds-of-kitchens {
+    min-width: 353px;
+    align-self: center;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 25px 40px;
+}
+.modal-resellertale {
+    position: relative;
+    width: 150px;
+    aspect-ratio: 1 / 1;
+    transition: .5s;
+    
+    &:hover {
+        transform: scale(1.1);
+    }
+}
+input[id^='kitchen'] {
+    appearance: none;
+    outline: none;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, .5);
+    border: 3px solid var(--border-color);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: .5s;
+    position: relative;
+    &::before {
+        content: '';
+        font-family: 'fontAwesome';
+        left: 10%;
+        top: 10%;
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        border: 0px solid var(--border-color);
+        color: var(--secondary-color);
+        width: 0;
+        height: 0;
+        transform: translate(-50%, -50%);
+        transition: all .5s, border .3s;
+
+    }
+    &:hover {
+        &::before {
+            width: 1.2rem;
+            height: 1.2rem;
+            border: 1px solid var(--border-color);
+        }
+    }
+    &:checked {
+        border: 3px solid var(--secondary-color);
+        &::before {
+            content: '\f058';
+            font-size: 1.2rem;
+            border: none;
+        }
+        & ~ .kind-of-kitchen {
+            color: var(--secondary-color);
+            & i {
+                animation: selectKitchen 1s;
+            }
+        }
+
+    }
+}
+@keyframes selectKitchen {
+    50% {
+        font-size: 3rem;
+    }
+}
+.modal-resellerkind-of-kitchen {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    gap: 23px;
+    font-size: 1.1rem;
+    & i {
+        transition: .5s;
+        font-size: 2rem;
+    }
+    & h6 {
+        transition: .5;
+        white-space: nowrap;
+        font-weight: 600;
+        letter-spacing: 1px;
+    }
+}
+.active-step-of-form {
+    display: flex;
+    animation: newStep .8s;
+    transform-origin: left;
+}
+@keyframes newStep {
+    from {
+        transform: scale(0, 1);
+    }
+    to {
+        transform: scale(1, 1);
+    }
+}
+.hidden-btn {
+    display: none;
+}
+.modal-resellerinvalid-input {
+    background: rgb(241, 176, 126);
+    color: var(--main-color);
+    font-weight: 600;
+
+}
+@media (max-width: 1000px) {
+    .modal-resellerwrapper {
+        transform: translate(-50%, -50%) scale(.7);
+    }
+}
+
+/* Media query for screens smaller than 768px (e.g., tablets) */
+@media (max-width: 768px) {
+    .modal-reseller {
+        /* Styles for tablets */
+        width: 80%; /* Adjust the width as needed */
+    }
+}
+
+
+
+/* Media query for screens smaller than 480px (e.g., smartphones) */
+@media (max-width: 480px) {
+    .modal-reseller {
+        /* Styles for smartphones */
+        width: 90%; /* Adjust the width as needed */
+    }
+
+    #reseller-emailForm .modal-resellerbtns{
+        margin-right: 100px;
+    }
+   
+    .close-button {
+    position: absolute;
+    top: 10px; /* Adjust as needed to control vertical position */
+    right: 25%; /* Adjust as needed to control horizontal position */
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: #333; /* Color of the X icon */
+}
+    .modal-resellerform-create-account {
+        padding: 5% 3%; /* Adjust the padding as needed */
+    }
+    .step-of-form h2 {
+        font-size: 1.2rem; /* Adjust font size for smaller screens */
+    }
+    .modal-resellertext {
+        padding: 2% 2%; /* Adjust padding for smaller screens */
+    }
+    /* Add more specific styles for smaller screens as needed */
+}
+
+</style>
+
+<script>
+    // Focus on the description of the date of birth field
+document.querySelectorAll('.modal-resellerdate').forEach(date => {
+    date.addEventListener('focusin', (e) => {
+        e.target.parentElement.nextElementSibling.style.color = 'var(--secondary-color)';
+    })
+    date.addEventListener('focusout', (e) => {
+        e.target.parentElement.nextElementSibling.style.color = '';
+    })
+})
+
+// Переход между шагами формы
+let stepOfForm = document.querySelectorAll('.step-of-form'),
+stepOfProgress = document.querySelectorAll('.step'),
+indicator = document.querySelector('.modal-resellerindicator'),
+btns = Array.from(document.querySelector('.modal-resellerbtns').children), currentForm = 0;
+btns.forEach(btn => btn.addEventListener('click', newStep));
+function newStep(e) {
+    if (!e.target.classList.contains('submit')) {
+        stepOfForm[currentForm].classList.remove('active-step-of-form');
+        stepOfForm[e.target.classList.contains('modal-resellernext') ? ++currentForm : --currentForm].classList.add('active-step-of-form');
+        if (currentForm + 1 === stepOfForm.length) {
+            document.querySelector('.modal-resellernext').classList.add('hidden-btn')
+            document.querySelector('.submit').classList.remove('hidden-btn');
+        }
+        else {
+            document.querySelector('.modal-resellernext').classList.remove('hidden-btn')
+            document.querySelector('.submit').classList.add('hidden-btn');
+        }
+        if (!currentForm) document.querySelector('.modal-resellerback').disabled = true;
+        else document.querySelector('.modal-resellerback').disabled = false;
+    }
+    stepOfProgress.forEach((step, indx) => {
+        if (indx < currentForm + 1) step.classList.add('active-step');
+        else step.classList.remove('active-step');
+    })
+    let activeSteps = Array.from(stepOfProgress).filter(step => step.classList.contains('active-step'));
+    indicator.style.height = `${(activeSteps.length - 1) / (stepOfProgress.length - 1) * 100}%`;
+}
+function checkInput(e) {
+    let regExps = {
+        text: /\p{L}+/ui,
+        date: [/^[1-9]$|^[1-3]\d$/, /^[1-9]$|^1[0-2]$/, /^19[1-9]{2}$|^20([0-1]\d|2[0-3])$/],
+        email: /\w+?@\w+?\.\w+/i,
+        password: /.{6,}/si
+    }
+    if (e.target.id === 'date') {
+        let indexInputDate = Array.from(document.querySelector('.date').children).indexOf(e.target);
+        if (regExps['date'][indexInputDate].test(e.target.value)) e.target.classList.remove('invalid-input');
+        else e.target.classList.add('invalid-input');
+    }
+    else if (regExps[e.target.type].test(e.target.value)) e.target.classList.remove('invalid-input');
+    else e.target.classList.add('invalid-input');
+}
+
+
+
+// Assuming you have an array to store the selected checkbox IDs
+var selectedData = [];
+
+document.getElementById("reseller-emailForm").addEventListener("submit", function (event) {
+    event.preventDefault(); // Prevent the default form submission
+
+    // Loop through the checkboxes and collect the selected ones
+    var checkboxes = document.querySelectorAll('.modal-resellertale input[type="checkbox"]');
+    checkboxes.forEach(function (checkbox) {
+        if (checkbox.checked) {
+            // Add the ID (which corresponds to the checkbox's "id" attribute) to the selectedData array
+            selectedData.push(checkbox.id);
+        }
+    });
+
+    // Serialize the form data
+    var formData = new FormData(this);
+    window.parent.postMessage("showloading", "*");
+    // Add the selected checkbox data to the form data
+    formData.append('selectedData', JSON.stringify(selectedData));
+
+    console.log(selectedData);
+    // Debugging: Output form data and selected checkbox IDs to the console
+    for (var pair of formData.entries()) {
+        console.log(pair[0] + ': ' + pair[1]);
+    }
+
+    console.log(selectedData);
+    // Send an AJAX request to send-reseller.php
+    var xhr = new XMLHttpRequest();
+    xhr.open("POST.html", "../PHPMailer/send/send-reseller.html", true);
+
+ // In your AJAX success callback
+xhr.onreadystatechange = function () {
+    if (xhr.readyState == 4) {
+
+        window.parent.postMessage("hideloading", "*");
+
+
+
+        if (xhr.status == 200) {
+
+           
+               // Reset the form
+               var myForm = document.getElementById("reseller-emailForm"); // Replace "myForm" with the actual ID of your form
+            myForm.reset();
+            // Handle the response here (e.g., display a success message or update the page)
+            window.parent.postMessage("openModal", "*");
+        } else {
+            // Handle errors if needed
+            console.log("Error:");
+            alert("Error: ");
+        }
+    }
+};
+xhr.send(formData);
+
+});
+
+
+</script>
+
+</body>
+</html>
